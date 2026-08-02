@@ -47,7 +47,6 @@
   transform: translateX(2px);
 }
 
-/* Adaptación a pantallas pequeñas */
 @media (max-width: 380px) {
   .author-card {
     padding: 18px;
