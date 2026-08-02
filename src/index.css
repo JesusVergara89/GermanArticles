@@ -1,13 +1,18 @@
 *{
+
   box-sizing:border-box;
+
 }
 
 
-html,body,#root{
+html,
+body,
+#root{
 
   margin:0;
 
   width:100%;
+
   min-height:100%;
 
 }
@@ -17,12 +22,109 @@ body{
 
   overflow-x:hidden;
 
+  font-family:Inter, sans-serif;
+
 }
+
 
 
 button,
 input{
 
   font-family:inherit;
+
+}
+
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.app-container{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+}
+
+
+
+/* BUY ME A COFFEE */
+
+.buy-coffee{
+
+  margin-top:30px;
+
+  margin-bottom:40px;
+
+
+  background:#ffdd00;
+
+  color:#000;
+
+
+  padding:18px 45px;
+
+
+  border-radius:35px;
+
+
+  text-decoration:none;
+
+
+  font-weight:bold;
+
+
+  font-size:20px;
+
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.25);
+
+
+  transition:.3s;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+}
+
+
+
+.buy-coffee:hover{
+
+  transform:scale(1.05);
+
+}
+
+
+
+
+@media(max-width:380px){
+
+
+  .buy-coffee{
+
+    width:90%;
+
+    font-size:18px;
+
+    padding:16px 20px;
+
+    margin-top:25px;
+
+  }
+
 
 }

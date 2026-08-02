@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./Lib/supabaseClient";
 import FlashcardArtikel from "./Components/FlashcardArtikel";
+import BuyMeCoffee from "./Components/BuyMeCoffee";
 
 function App() {
   const [words, setWords] = useState([]);
@@ -24,7 +25,16 @@ function App() {
 
   console.log(words.length)
 
-  return <FlashcardArtikel words={words} />;
+ return (
+  <div className="app-container">
+
+    <FlashcardArtikel words={words} />
+
+    <BuyMeCoffee />
+
+  </div>
+);
+  
 }
 
 export default App;
