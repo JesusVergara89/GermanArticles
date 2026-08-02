@@ -223,8 +223,7 @@ export default function FlashcardArtikel({ words = [] }) {
 
   const current = deck[index];
 
-  // Se remueve el focus() automático al cambiar de índice
-  // para evitar que el teclado vuelva a aparecer en móviles al avanzar de tarjeta.
+
   useEffect(() => {}, [index]);
 
   function nextCard() {
@@ -247,13 +246,12 @@ function checkAnswer(e) {
       inputRef.current.blur();
     }
 
-    // 2. Espera a que el teclado se recoja por completo y fuerza el centrado visual
     setTimeout(() => {
-      // Fuerza el reseteo del scroll en la ventana
+    
       window.scrollTo(0, 0);
       document.body.scrollTop = 0;
 
-      // Centra la app de nuevo en el viewport del móvil
+  
       const appElem = document.querySelector(".artikel-app");
       if (appElem) {
         appElem.scrollIntoView({ block: "center", behavior: "smooth" });

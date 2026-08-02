@@ -17,7 +17,7 @@ function Myself() {
           rel="noopener noreferrer"
           className="linkedin-link"
         >
-          <span>Conectemos en LinkedIn</span>
+          <span>Let’s connect on LinkedIn.</span>
           <svg
             width="16"
             height="16"
