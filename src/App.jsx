@@ -1,25 +1,31 @@
-import { useEffect } from 'react'
-import { supabase } from './lib/supabaseClient'
+import { useEffect, useState } from "react";
+import { supabase } from "./lib/supabaseClient";
+import FlashcardArtikel from "./Components/FlashcardArtikel";
 
 function App() {
+  const [words, setWords] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchWords = async () => {
       const { data, error } = await supabase
-        .from('vocabulario') // 👈 tu tabla real
-        .select('*')
+        .from("vocabulary")
+        .select("id, artikel, nomen, palabra_completa, espanol");
 
       if (error) {
-        console.error('Error:', error)
-      } else {
-        console.log('Datos:', data)
+        console.error(error);
+        return;
       }
-    }
 
-    fetchData()
-  }, [])
+      setWords(data ?? []);
+    };
 
-  return <h1>Supabase conectado 🚀</h1>
+    fetchWords();
+  }, []);
+
+  console.log(words.length)
+
+  return <FlashcardArtikel words={words} />;
 }
 
-export default App
+export default App;
+
