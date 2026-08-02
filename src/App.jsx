@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "./Lib/supabaseClient";
 import FlashcardArtikel from "./Components/FlashcardArtikel";
 import BuyMeCoffee from "./Components/BuyMeCoffee";
+import Myself from "./Components/Myself";
 
 function App() {
   const [words, setWords] = useState([]);
@@ -31,6 +32,8 @@ function App() {
     <FlashcardArtikel words={words} />
 
     <BuyMeCoffee />
+
+    <Myself />
 
   </div>
 );
