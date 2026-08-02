@@ -242,36 +242,35 @@ export default function FlashcardArtikel({ words = [] }) {
 function checkAnswer(e) {
     e.preventDefault();
 
-    // 1. Quita el foco del input para iniciar la bajada del teclado
+    // 1. Quita el foco del input inmediatamente
     if (inputRef.current) {
       inputRef.current.blur();
     }
 
-    // 2. Espera unos milisegundos a que el SO baje el teclado y resetea el scroll al centro
+    // 2. Espera a que el teclado se recoja por completo y fuerza el centrado visual
     setTimeout(() => {
+      // Fuerza el reseteo del scroll en la ventana
       window.scrollTo(0, 0);
-      document.body.scrollTop = 0; // Para compatibilidad con Safari iOS antiguo
-    }, 50);
+      document.body.scrollTop = 0;
+
+      // Centra la app de nuevo en el viewport del móvil
+      const appElem = document.querySelector(".artikel-app");
+      if (appElem) {
+        appElem.scrollIntoView({ block: "center", behavior: "smooth" });
+      }
+    }, 100);
 
     const correct =
       input.trim().toLowerCase() === current.artikel.toLowerCase();
 
-    setStatus(
-      correct
-        ? "correct"
-        : "incorrect"
-    );
-
+    setStatus(correct ? "correct" : "incorrect");
     setFlipped(true);
 
     if (correct) {
       fireConfetti();
     }
 
-    setTimeout(
-      nextCard,
-      correct ? 1500 : 2200
-    );
+    setTimeout(nextCard, correct ? 1500 : 2200);
   }
 
   if (!current) {

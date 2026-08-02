@@ -7,14 +7,11 @@
 
 html,
 body,
-#root{
-
-  margin:0;
-
-  width:100%;
-
-  min-height:100%;
-
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -39,20 +36,16 @@ input{
 
 /* CONTENEDOR PRINCIPAL */
 
-.app-container{
-
-  width:100%;
-
-  min-height:100vh;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
+.app-container {
+  width: 100%;
+  /* 100dvh se ajusta al alto real sin el teclado */
+  min-height: 100dvh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Fuerza que los elementos dentro se alineen al centro vertical */
+  justify-content: center; 
 }
-
 
 
 /* BUY ME A COFFEE */
