@@ -239,16 +239,19 @@ export default function FlashcardArtikel({ words = [] }) {
     );
   }
 
-  function checkAnswer(e) {
+function checkAnswer(e) {
     e.preventDefault();
 
-    // 1. Quita el foco del input para obligar al teclado del móvil a bajarse
+    // 1. Quita el foco del input para iniciar la bajada del teclado
     if (inputRef.current) {
       inputRef.current.blur();
     }
 
-    // 2. Reajusta la pantalla hacia arriba si el navegador móvil la empujó
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // 2. Espera unos milisegundos a que el SO baje el teclado y resetea el scroll al centro
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0; // Para compatibilidad con Safari iOS antiguo
+    }, 50);
 
     const correct =
       input.trim().toLowerCase() === current.artikel.toLowerCase();
