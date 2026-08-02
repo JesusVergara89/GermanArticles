@@ -503,14 +503,6 @@ const deck = useMemo(() => {
             </p>
 
 
-
-            <button
-              onClick={nextCard}
-            >
-              Siguiente →
-            </button>
-
-
           </div>
 
 
