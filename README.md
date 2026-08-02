@@ -1,16 +1,104 @@
-# React + Vite
+# 🇩🇪 German Artikel Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web interactiva para aprender vocabulario alemán y dominar sus artículos:
 
-Currently, two official plugins are available:
+- **der** → masculino
+- **die** → femenino
+- **das** → neutro
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+La aplicación utiliza tarjetas (flashcards) para practicar palabras en alemán, identificar su artículo correcto y mejorar la memoria mediante repetición.
 
-## React Compiler
+## ✨ Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 Tarjetas de vocabulario alemán
+- 🧠 Práctica de artículos definidos (der, die, das)
+- 🔄 Tarjetas interactivas con animación
+- ✅ Validación de respuestas
+- 🌎 Traducción al español
+- 📱 Diseño responsive para móvil, tablet y escritorio
+- ☁️ Base de datos con Supabase
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías utilizadas
+
+- React + Vite
+- JavaScript
+- CSS Responsive
+- Supabase (Database)
+- Git
+
+
+## 📖 Objetivo del proyecto
+
+Esta aplicación fue creada para facilitar el aprendizaje del idioma alemán mediante una metodología visual basada en tarjetas de memoria.
+
+El objetivo principal es ayudar a los estudiantes a recordar:
+
+- El género de los sustantivos alemanes
+- El artículo correcto
+- La traducción al español
+- El uso práctico del vocabulario
+
+Englisch:
+
+Englisch
+
+# 🇩🇪 German Artikel Cards
+
+An interactive web application designed to learn German vocabulary and master noun articles:
+
+- **der** → masculine nouns
+- **die** → feminine nouns
+- **das** → neuter nouns
+
+This application uses flashcards to practice German words, identify the correct article, and improve vocabulary retention through repetition.
+
+
+## ✨ Features
+
+- 📚 German vocabulary flashcards
+- 🧠 Practice with German definite articles (der, die, das)
+- 🔄 Interactive cards with flip animations
+- ✅ Answer validation system
+- 🌎 German-Spanish translations
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- ☁️ Data management with Supabase
+
+
+## 🛠️ Technologies
+
+- React + Vite
+- JavaScript
+- Responsive CSS
+- Supabase Database
+- Git
+
+
+## 📖 Project Goal
+
+This application was created to support German language learning through a visual flashcard methodology.
+
+The main goal is to help students remember:
+
+- The gender of German nouns
+- The correct article for each word
+- Spanish translations
+- Practical vocabulary usage
+
+
+## 🚀 Installation
+
+
+
+## 🚀 Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
