@@ -22,14 +22,6 @@
 
 
 
-  background:
-  linear-gradient(
-    135deg,
-    #faf9f6,
-    #eeeeee
-  );
-
-
 }
 
 
@@ -309,7 +301,6 @@ button:hover{
 
 
 @media(max-width:380px){
-
 
   .artikel-app{
 
