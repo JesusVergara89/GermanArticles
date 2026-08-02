@@ -39,13 +39,7 @@ El objetivo principal es ayudar a los estudiantes a recordar:
 - La traducción al español
 - El uso práctico del vocabulario
 
-
-## 🚀 Instalación
-
-Clonar el repositorio:
-
-```bash
-git clone URL_DEL_REPOSITORIO
+Englisch:
 
 Englisch
 
@@ -93,6 +87,16 @@ The main goal is to help students remember:
 
 
 ## 🚀 Installation
+
+
+
+## 🚀 Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+
 
 Clone the repository:
 
