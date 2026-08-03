@@ -241,10 +241,8 @@ export default function FlashcardArtikel({ words = [] }) {
 function checkAnswer(e) {
   e.preventDefault();
 
-  // ✅ limpiar espacios (inicio, final y dobles)
   const normalized = input.trim().toLowerCase();
 
-  // ❌ validar SOLO palabras correctas
   const isValid = /^(der|die|das)$/.test(normalized);
 
   if (!isValid) {
