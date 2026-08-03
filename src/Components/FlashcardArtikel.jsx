@@ -239,37 +239,35 @@ export default function FlashcardArtikel({ words = [] }) {
   }
 
 function checkAnswer(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // 1. Quita el foco del input inmediatamente
-    if (inputRef.current) {
-      inputRef.current.blur();
-    }
+  // ✅ limpiar espacios (inicio, final y dobles)
+  const normalized = input.trim().toLowerCase();
 
-    setTimeout(() => {
-    
-      window.scrollTo(0, 0);
-      document.body.scrollTop = 0;
+  // ❌ validar SOLO palabras correctas
+  const isValid = /^(der|die|das)$/.test(normalized);
 
-  
-      const appElem = document.querySelector(".artikel-app");
-      if (appElem) {
-        appElem.scrollIntoView({ block: "center", behavior: "smooth" });
-      }
-    }, 100);
-
-    const correct =
-      input.trim().toLowerCase() === current.artikel.toLowerCase();
-
-    setStatus(correct ? "correct" : "incorrect");
-    setFlipped(true);
-
-    if (correct) {
-      fireConfetti();
-    }
-
-    setTimeout(nextCard, correct ? 1500 : 2200);
+  if (!isValid) {
+    alert("Solo puedes escribir: der, die o das");
+    return;
   }
+
+  if (inputRef.current) {
+    inputRef.current.blur();
+  }
+
+  const correct =
+    normalized === current.artikel.toLowerCase();
+
+  setStatus(correct ? "correct" : "incorrect");
+  setFlipped(true);
+
+  if (correct) {
+    fireConfetti();
+  }
+
+  setTimeout(nextCard, correct ? 1500 : 2200);
+}
 
   if (!current) {
     return (
