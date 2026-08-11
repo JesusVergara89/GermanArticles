@@ -95,10 +95,10 @@ The main goal is to help students remember:
 Clonar el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone [URL_DEL_REPOSITORIO](https://github.com/JesusVergara89/GermanArticles)
 
 
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone [YOUR_REPOSITORY_URL](https://github.com/JesusVergara89/GermanArticles)
