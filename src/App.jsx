@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import { supabase } from "./Lib/supabaseClient";
 import FlashcardArtikel from "./Components/FlashcardArtikel";
 import BuyMeCoffee from "./Components/BuyMeCoffee";
 import Myself from "./Components/Myself";
+import Navbar from "./Components/Navbar";
+import ArticulosIndefinidos from "./Components/ArticulosIndefinidos";
+import ArticulosDefinidos from "./Components/ArticulosDefinidos";
 
-function App() {
+
+function Home() {
   const [words, setWords] = useState([]);
 
   useEffect(() => {
@@ -24,20 +30,44 @@ function App() {
     fetchWords();
   }, []);
 
-  console.log(words.length)
+  console.log(words.length);
 
- return (
-  <div className="app-container">
+  return (
+    <div className="app-container">
+      <FlashcardArtikel words={words} />
 
-    <FlashcardArtikel words={words} />
+      <BuyMeCoffee />
 
-    <BuyMeCoffee />
-
-    <Myself />
-
-  </div>
-);
-  
+      <Myself />
+    </div>
+  );
 }
+
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <main className="app-content">
+        <Routes>
+
+          <Route path="/" element={<Home />} />
+
+          <Route
+            path="/articulos-definidos"
+            element={<ArticulosDefinidos />}
+          />
+
+          <Route
+            path="/articulos-indefinidos"
+            element={<ArticulosIndefinidos />}
+          />
+
+        </Routes>
+      </main>
+    </>
+  );
+}
+
 
 export default App;
