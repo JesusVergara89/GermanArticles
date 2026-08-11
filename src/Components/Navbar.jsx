@@ -48,7 +48,7 @@ function Navbar() {
 
         <div className="menu-content">
           <Link to="/" onClick={closeMenu}>
-            Inicio
+            Artikel training
           </Link>
 
           <div className="menu-section">
