@@ -42,7 +42,7 @@ function Navbar() {
             onClick={closeMenu}
             aria-label="Cerrar menú"
           >
-            ×
+            
           </button>
         </div>
 
@@ -51,8 +51,19 @@ function Navbar() {
             Artikel training
           </Link>
 
-          <div className="menu-section">
-            <span>Aprender</span>
+            <Link
+              to="/articulos-definidos"
+              onClick={closeMenu}
+            >
+              Artículos definidos
+            </Link>
+
+            <Link
+              to="/articulos-indefinidos"
+              onClick={closeMenu}
+            >
+              Artículos indefinidos
+            </Link>
 
             <Link
               to="/articulos-definidos"
@@ -67,25 +78,6 @@ function Navbar() {
             >
               Artículos indefinidos
             </Link>
-          </div>
-
-          <div className="menu-section">
-            <span>Practicar</span>
-
-            <Link
-              to="/articulos-definidos"
-              onClick={closeMenu}
-            >
-              Artículos definidos
-            </Link>
-
-            <Link
-              to="/articulos-indefinidos"
-              onClick={closeMenu}
-            >
-              Artículos indefinidos
-            </Link>
-          </div>
         </div>
       </nav>
     </>
