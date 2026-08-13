@@ -30,8 +30,6 @@ function Home() {
     fetchWords();
   }, []);
 
-  console.log(words.length);
-
   return (
     <div className="app-container">
       <FlashcardArtikel words={words} />
@@ -44,6 +42,25 @@ function Home() {
 }
 
 function App() {
+  const [dativ, setDativ] = useState([]);
+
+  useEffect(() => {
+
+   const fetchDativ = async () => {
+      const { data, error } = await supabase
+        .from("dativo")
+        .select("id, artikel, nomen, palabra_completa, espanol");
+
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      setDativ(data ?? []);
+    };
+
+    fetchDativ();
+  }, []);
   return (
     <>
       <Navbar />
@@ -60,7 +77,7 @@ function App() {
 
           <Route
             path="/articulos-indefinidos"
-            element={<ArticulosIndefinidos />}
+            element={<ArticulosIndefinidos dativ={dativ} />}
           />
 
         </Routes>
