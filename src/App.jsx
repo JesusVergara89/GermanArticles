@@ -72,7 +72,7 @@ function App() {
 
           <Route
             path="/articulos-definidos"
-            element={<ArticulosDefinidos />}
+            element={<Home />}
           />
 
           <Route
