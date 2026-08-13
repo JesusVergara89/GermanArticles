@@ -24,7 +24,7 @@ function Navbar() {
         </button>
 
         <Link to="/" className="navbar-title" onClick={closeMenu}>
-          GermanArticles
+          German training
         </Link>
       </header>
 

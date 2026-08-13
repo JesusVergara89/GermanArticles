@@ -7,7 +7,6 @@ import BuyMeCoffee from "./Components/BuyMeCoffee";
 import Myself from "./Components/Myself";
 import Navbar from "./Components/Navbar";
 import ArticulosIndefinidos from "./Components/ArticulosIndefinidos";
-import ArticulosDefinidos from "./Components/ArticulosDefinidos";
 
 
 function Home() {
