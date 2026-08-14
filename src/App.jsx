@@ -47,8 +47,8 @@ function App() {
 
    const fetchDativ = async () => {
       const { data, error } = await supabase
-        .from("dativo")
-        .select("id, artikel, nomen, palabra_completa, espanol");
+        .from("palabras")
+        .select("id, artikel, nomen, palabra_completa, espanol, artikel_definido");
 
       if (error) {
         console.error(error);

@@ -387,7 +387,7 @@ function ArticulosIndefinidos({ dativ = [] }) {
             </h2>
 
             <h3>
-              {current.palabra_completa}
+              <span>{current.artikel_definido}</span> <span>{current.nomen}</span>
             </h3>
 
             <p>
